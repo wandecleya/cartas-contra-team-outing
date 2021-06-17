@@ -2,6 +2,7 @@ import {Service} from "./api";
 
 export const CartasService = {
   async getRespostas() {
-    return Service().get('/respostas').then((response) => response.data);
+    const response = await  Service().get('/respostas');
+    return response.data;
   },
 }
